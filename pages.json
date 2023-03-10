@@ -1,17 +1,27 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-			"path": "pages/index/index",
-			"style": {
-				"navigationBarTitleText": "uni-app"
-			}
-		}
-	],
+			{
+            "path" : "pages/home/home",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
 	"globalStyle": {
-		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
-		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"navigationBarTextStyle": "white",
+		"navigationBarTitleText": "navigation",
+		"navigationBarBackgroundColor": "#C00000",
+		"backgroundColor": "#000000"
 	},
 	"uniIdRouter": {},
 	"condition" : { //模式配置，仅开发期间生效
@@ -19,8 +29,23 @@
 		"list": [
 			{
 				"name": "", //模式名称
-				"path": "", //启动页面，必选
+				"path": "pages/home/home", //启动页面，必选
 				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	},
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#ff6700",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "首页"
+				
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的"
 			}
 		]
 	}
